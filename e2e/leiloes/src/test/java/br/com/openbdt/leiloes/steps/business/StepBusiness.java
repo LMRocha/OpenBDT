@@ -1,0 +1,162 @@
+package br.com.openbdt.leiloes.steps.business;
+
+import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.Select;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.test.context.ContextConfiguration;
+
+import io.openbdt.element.WebBrowserScreenElement;
+import br.com.openbdt.leiloes.pages.PageObjectClass;
+import jxl.common.Logger;
+import net.serenitybdd.core.annotations.findby.By;
+
+@ContextConfiguration("/context.xml")
+@Component
+public class StepBusiness {
+
+	@Autowired
+	PageObjectClass page;
+	
+	Logger LOG = Logger.getLogger(StepBusiness.class);
+	
+	@Autowired
+	private WebBrowserScreenElement viewElement; // OBJETO QUE CONTÉM MÉTODOS PRÓPRIOS DO FRAMEWORK
+
+	public void openHome(String url) {
+		viewElement.open(url);
+		viewElement.getDriver().manage().window().maximize();
+	}
+
+	public void clicarSignIn() {
+		viewElement.clickAndWait(page.getBotaoSignIn(), 15);
+	}
+
+	public void validarTelaDeCadastro() {
+		viewElement.waitForElementIsPresent(20, page.getTituloCreateAnAccount());
+		LOG.info(">> " + page.getTituloCreateAnAccount().getText());
+		Assert.assertEquals("CREATE AN ACCOUNT", page.getTituloCreateAnAccount().getText());
+	}
+
+	public void preencherEmailAddress(String emailAddress) {
+		viewElement.sendText(page.getCampoEmailCreate(), emailAddress);
+	}
+
+	public void clicarBotaoCreateAnAccount() {
+		viewElement.clickAndWait(page.getBotaoCreateAnAccount(),20);
+
+	}
+
+	public void validarTelaPersonalInformation() {
+		viewElement.waitForElementIsPresent(20, page.getTituloYourPersonalInformation());
+		LOG.info(">> " + page.getTituloYourPersonalInformation().getText());
+		Assert.assertEquals("YOUR PERSONAL INFORMATION", page.getTituloYourPersonalInformation().getText());
+	}
+
+	public void preencherRadioButtonTitle(String radioButtonTitle) {
+		try {
+			if (radioButtonTitle.equalsIgnoreCase("mr.")) {
+				viewElement.click(viewElement.findElement(page.getXpathMr()));
+			}
+			if (radioButtonTitle.equalsIgnoreCase("mrs.")) {
+				viewElement.click(viewElement.findElement(page.getXpathMrs()));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void preencherFirstName(String firstName) {
+		viewElement.sendText(page.getCampoFirstName(), firstName);
+		viewElement.sendText(page.getCampoFirstName(), Keys.TAB.toString());
+	}
+
+	public void preencherLastName(String lastName) {
+		viewElement.sendText(page.getCampoLastName(), lastName);
+		viewElement.sendText(page.getCampoLastName(), Keys.TAB.toString());
+	}
+
+	public void preencherEmailTelaDeCadastro(String emailTelaCadastro) {
+		viewElement.sendText(page.getCampoEmail(), emailTelaCadastro);
+		viewElement.sendText(page.getCampoEmail(), Keys.TAB.toString());
+	}
+
+	public void preencherPassword(String password) {
+		viewElement.sendText(page.getCampoPassword(), password);
+		viewElement.sendText(page.getCampoPassword(), Keys.TAB.toString());
+	}
+
+	public void selecionarDiaDateOfBirth(String dayDateOfBirth) {
+		new Select(viewElement.findElement(By.name("days"))).selectByVisibleText("6  ");
+	}
+
+	public void selecionarMesDateOfBirth(String monthDateOfBirth) {
+		new Select(viewElement.findElement(By.name("months"))).selectByVisibleText("November ");
+	}
+
+	public void selecionarAnoDateOfBirth(String yearDateOfBirth) {
+		new Select(viewElement.findElement(By.name("years"))).selectByVisibleText("1996  ");
+	}
+
+	public void preencherCheckBoxNewsletter(String newsletter) {
+		if (newsletter.equalsIgnoreCase("sim")) {
+			viewElement.findElement(By.xpath("//div[@id='uniform-newsletter']/span/input[@id='newsletter']")).click();
+		}
+	}
+
+	public void preencherCheckBoxOffersPartners(String partners) {
+		if (partners.equalsIgnoreCase("sim")) {
+			viewElement.findElement(By.xpath("//div[@id='uniform-optin']/span/input[@id='optin']")).click();
+		}
+	}
+
+	public void preencherAddress(String address) {
+		viewElement.sendText(page.getCampoAddress(), address);
+	}
+
+	public void preencherCity(String city) {
+		viewElement.sendText(page.getCampoCity(), city);
+	}
+
+	public void selecionarState(String state) {
+		new Select(viewElement.findElement(By.name("id_state"))).selectByVisibleText(state);
+	}
+
+	public void preencherZipCode(String zipCode) {
+		viewElement.sendText(page.getCampoZipCode(), zipCode);
+	}
+
+	public void selecionarCountry(String country) {
+		new Select(viewElement.findElement(By.name("id_country"))).selectByVisibleText(country);
+	}
+
+	public void preencherAdditionalInformation(String information) {
+		viewElement.sendText(page.getCampoAdditionalInformation(), information);
+	}
+
+	public void preencherMobilePhone(String mobilePhone) {
+		viewElement.sendText(page.getCampoMobilePhone(), mobilePhone);
+	}
+
+	public void preencherAssignAddressAlias(String addressAlias) {
+		viewElement.clear(page.getCampoAssingAlias());
+		viewElement.sendText(page.getCampoAssingAlias(), addressAlias);
+	}
+
+	public void clicarBotaoRegister() {
+		viewElement.clickAndWait(page.getBotaoRegister(), 15);
+	}
+
+	public void validarTelaMyAccount() {
+		viewElement.waitForElementIsPresent(20, page.getTituloMyAccount());
+		LOG.info(">> " + page.getTituloMyAccount().getText());
+		Assert.assertEquals("MY ACCOUNT", page.getTituloMyAccount().getText());
+	}
+
+	public void validarTelaMyAccount(String arg1) {
+		viewElement.waitForElementIsPresent(20, page.getTituloMyAccount());
+		LOG.info(">> " + page.getTituloMyAccount().getText());
+		Assert.assertEquals(arg1, page.getTituloMyAccount().getText());
+	}
+}

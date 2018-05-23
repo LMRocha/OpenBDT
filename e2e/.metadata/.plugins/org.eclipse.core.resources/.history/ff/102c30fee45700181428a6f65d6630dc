@@ -1,0 +1,25 @@
+#thucydides.requirements.dir=src/test/resources/net/serenity_bdd/samples/etsy/features
+
+#Chrome
+webdriver.driver=chrome
+webdriver.chrome.driver=C:\Program Files\browser drivers\chromedriver.exe
+
+#Firefox
+#webdriver.driver=firefox
+#webdriver.gecko.driver=gecko/driver/location[relative|absolute]
+
+#Internet explorer
+#webdriver.driver = provided
+#webdriver.provided.type = io.openbdt.driver.IEDriver
+#webdriver.provided.io.openbdt.driver.IEDriver = io.openbdt.driver.IEDriver
+#thucydides.driver.capabilities = io.openbdt.driver.IEDriver
+#webdriver.ie.driver=iexplorer/driver/location[relative|absolute]
+
+#TIMEOUT
+webdriver.timeouts.implicitlywait=5000
+
+#SERENITY REPORT OUTPUT DIRECTORY
+serenity.outputDirectory=C:/Users/LBarbosa/Desktop/OpenBDT/e2e/workspace/br.com.openbdt.lauro/serenity-reports
+
+#OPENBDT REPORT OUTPUT DIRECTORY
+openbdt.report.outputDirectory=C:/Users/LBarbosa/Desktop/OpenBDT/e2e/workspace/br.com.openbdt.lauro/openbdt-reports/index.html
