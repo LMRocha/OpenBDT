@@ -1,1 +1,1 @@
-e2e/bdt-report/*
+/e2e/bdt-report/*
