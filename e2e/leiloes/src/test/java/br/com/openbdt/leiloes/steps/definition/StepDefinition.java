@@ -25,7 +25,8 @@ public class StepDefinition {
 	public void clico_em_Sign_in() throws Throwable {
 	    stepB.clicarSignIn();
 	}
-
+	
+	
 	@When("^sistema apresenta tela de cadastro$")
 	public void sistema_apresenta_tela_de_cadastro() throws Throwable {
 	    stepB.validarTelaDeCadastro();

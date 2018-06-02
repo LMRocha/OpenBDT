@@ -1,3 +1,5 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Acessar a página inicial do sistema Leiloes","Acessar a pagina inicial","SUCCESS","2018-05-27T07:05:01.886-03:00[America/Sao_Paulo]","0.0","17.65"
+"Acessar a página inicial do sistema Leiloes","Acessar a pagina inicial","SUCCESS","2018-06-02T06:29:43.086-03:00[America/Sao_Paulo]","0.0","14.77"
 "Acessar a página usuarios do sistema Leiloes","Acessar a pagina Usuarios","SUCCESS","2018-05-27T07:05:19.539-03:00[America/Sao_Paulo]","0.0","8.05"
+"Acessar a página usuarios do sistema Leiloes","Cadastrar novo usuario","SUCCESS","2018-06-02T06:29:57.857-03:00[America/Sao_Paulo]","0.0","7.96"
+"Acessar a página usuarios do sistema Leiloes","Cadastrar novo usuario sem preencher os campos obrigatórios","SUCCESS","2018-06-02T06:30:05.822-03:00[America/Sao_Paulo]","0.0","14.95"

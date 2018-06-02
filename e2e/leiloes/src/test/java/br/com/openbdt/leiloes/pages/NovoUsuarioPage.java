@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import net.serenitybdd.core.pages.PageObject;
 
 @Component
-public class CadastrarNovoUsuario extends PageObject{
+public class NovoUsuarioPage extends PageObject{
 
 	@FindBy(name = "usuario.nome")
 	private WebElement txtNomeUsuario;
@@ -37,6 +37,11 @@ public class CadastrarNovoUsuario extends PageObject{
 
 	public WebElement getBtHrefVoltar() {
 		return btHrefVoltar;
+	}
+	
+	
+	public String getPaginaSources(){
+		return getDriver().getPageSource();
 	}
 	
 }
