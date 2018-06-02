@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Acessar a página usuarios do sistema Leiloes" skipped="0" tests="3" time="22.92" timestamp="2018-06-02 06:29:57"><testcase name="Cadastrar novo usuario"/><testcase name="Cadastrar novo usuario sem preencher os campos obrigatórios"/></testsuite>
