@@ -1,0 +1,2713 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Features</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.4/media/jqueryui/dataTables.jqueryui.css" rel="Stylesheet"/>
+<link type="text/css" href="css/tables.css" rel="stylesheet" />
+
+<script type="text/javascript" src="datatables/1.10.4/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.4/media/jqueryui/dataTables.jqueryui.min.js"></script><!-- jQplot -->
+<!--[if IE]>
+<script language="javascript" type="text/javascript" src="excanvas/3/excanvas.compiled.js"></script>
+<![endif]--><link rel="stylesheet" type="text/css" href="jqplot/1.0.8/jquery.jqplot.min.css"/>
+<script type="text/javascript" src="jqplot/1.0.8/jquery.jqplot.min.js"></script>
+<script type="text/javascript" src="jqplot/1.0.8/plugins/jqplot.pieRenderer.min.js"></script>
+
+
+    <script class="code" type="text/javascript">$(document).ready(function () {
+
+        // Results table
+        $('#req-results-table').DataTable({
+            "order": [
+                [ 2, "asc" ]
+            ],
+            "pageLength": 25
+        });
+        $('#test-results-table').DataTable({
+            "order": [
+                [ 2, "asc" ]
+            ],
+            "pageLength": 25
+        });
+        $('#examples-table').DataTable({
+            "order": [
+                [ 2, "asc" ]
+            ],
+            "pageLength": 25
+        });
+        $("#tabs").tabs();
+        $("#test-tabs").tabs();
+    })
+    ;
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".read-more-link").click(function () {
+                $(this).nextAll("div.read-more-text").toggle();
+                var isrc = $(this).find("img").attr('src');
+                if (isrc == 'images/plus.png') {
+                    $(this).find("img").attr("src", function () {
+                        return "images/minus.png";
+                    });
+                } else {
+                    $(this).find("img").attr("src", function () {
+                        return "images/plus.png";
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="results-page">
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="middlecontent">
+<div id="contenttop">
+    <div class="middlebg">
+        <span class="breadcrumbs"><a href="index.html">Home</a>
+            > <span class="truncate-60">Features</span>
+        </span>
+    </div>
+    <div class="rightbg"></div>
+</div>
+
+<div class="clr"></div>
+
+<!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li >
+            <a href="index.html"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 02-06-2018 22:31</span>
+    <br style="clear:left"/>
+</div>
+
+<div class="clr"></div>
+
+<div id="beforetable"></div>
+<div id="results-dashboard">
+<div class="middlb">
+<div class="table">
+
+    <div id="tabs">
+            <ul>
+                    <li><a href="#tabs-1">
+                    Features (12)
+                    </a></li>`
+            </ul>
+            <div id="tabs-1" class="capabilities-table">
+
+
+<div id="req_list_tests" class="table">
+    <div class="test-results">
+        <table id="req-results-table">
+            <thead>
+            <tr>
+                <th width="30" class="test-results-heading">&nbsp;</th>
+                <th width="65" class="test-results-heading">ID</th>
+                <th width="525" class="test-results-heading">Feature</th>
+                    <th width="65" class="test-results-heading">Stories</th>
+                <th class="test-results-heading" width="75px">Automated<br/>Tests</th>
+                    <th class="test-results-heading" width="75px">Manual<br/>Tests</th>
+
+                <th width="125px" class="test-results-heading">Test Results</th>
+
+                <th width="125px" class="test-results-heading">Working Stories</th>
+            </tr>
+            <tbody>
+
+
+
+                <tr class="test-SUCCESS requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                        <span style="display:none">2</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="SUCCESS-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="4045b3f0d4025bbb5a9bdb6328fddd7b9010b9e854df0c324d38cd3532a6efbc.html">Acessar a p&aacute;gina usuarios do sistema Leiloes</a></span>
+
+                        <div class="requirementNarrative read-more-text"></div>
+                    </td>
+
+                        <td class="bluetext requirementRowCell">0</td>
+
+                    <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                    <td class="greentext requirementRowCell">0</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">0</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+
+
+                <tr class="test-SUCCESS requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                        <span style="display:none">2</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="SUCCESS-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="d313ddd4934d2dfc8af894fcb21b3c1c9e22f858e990fd1ba4ecd69d867a993c.html">Acessar a p&aacute;gina usuarios do sistema Leiloes</a></span>
+
+                        <div class="requirementNarrative read-more-text"></div>
+                    </td>
+
+                        <td class="bluetext requirementRowCell">0</td>
+
+                    <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                    <td class="greentext requirementRowCell">0</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">0</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+
+
+                <tr class="test-SUCCESS requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                        <span style="display:none">2</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="SUCCESS-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="61633c9d4f41dcc717294dedab651883138d37b1fc802437e62d30726266075f.html">Acessar a p&aacute;gina usuarios do sistema Leiloes</a></span>
+
+                        <div class="requirementNarrative read-more-text"></div>
+                    </td>
+
+                        <td class="bluetext requirementRowCell">0</td>
+
+                    <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                    <td class="greentext requirementRowCell">0</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">0</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+
+
+                <tr class="test-SUCCESS requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                        <span style="display:none">2</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="SUCCESS-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="ae82ddbf3d3b9208d99aa12d2aaa160a3490f5bcd5006afeb9ccb759e2f7b991.html">Acessar a p&aacute;gina usuarios do sistema Leiloes</a></span>
+
+                        <div class="requirementNarrative read-more-text"></div>
+                    </td>
+
+                        <td class="bluetext requirementRowCell">0</td>
+
+                    <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                    <td class="greentext requirementRowCell">0</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">0</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="Acessar a página usuarios do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+
+
+                <tr class="test-SUCCESS requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                        <span style="display:none">2</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="SUCCESS-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="a17ad9db0793bcaaf09e60e31414f67fc172bdaf0e2da7c17d6c3a198bf01021.html">Test classes</a></span>
+
+                        <div class="requirementNarrative read-more-text"></div>
+                    </td>
+
+                        <td class="bluetext requirementRowCell">1</td>
+
+                    <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                    <td class="greentext requirementRowCell">0</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">0</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="Test classes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (100%"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="Test classes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (100%"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="Test classes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (100%">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="Test classes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (100%">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="Test classes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (100%">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="Test classes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (100%">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="Test classes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+
+
+                <tr class="test-SUCCESS requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                        <span style="display:none">2</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="SUCCESS-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="eeb2794b0204d8b9baa0d2e254aa0af4b2f9dbb83c61ec9d0348af354a348a9d.html">Test</a></span>
+
+                        <div class="requirementNarrative read-more-text"></div>
+                    </td>
+
+                        <td class="bluetext requirementRowCell">1</td>
+
+                    <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                    <td class="greentext requirementRowCell">0</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">0</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="Test:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (100%"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="Test:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (100%"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="Test:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (100%">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="Test:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (100%">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="Test:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (100%">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="Test:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (100%">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="Test:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+
+
+                <tr class="test-SUCCESS requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                        <span style="display:none">2</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="SUCCESS-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="3244253ab3bf347a649439dd66a9cd7abe065660ded7565449c6d0473c7743a1.html">Acessar a p&aacute;gina inicial do sistema Leiloes</a></span>
+
+                        <div class="requirementNarrative read-more-text"></div>
+                    </td>
+
+                        <td class="bluetext requirementRowCell">0</td>
+
+                    <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                    <td class="greentext requirementRowCell">0</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">0</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="Acessar a página inicial do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="Acessar a página inicial do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="Acessar a página inicial do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="Acessar a página inicial do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="Acessar a página inicial do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="Acessar a página inicial do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="Acessar a página inicial do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+
+
+                <tr class="test-SUCCESS requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                        <span style="display:none">2</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="SUCCESS-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="747c7701a5c46cee8b42292960538f8d5231fa3bf58680594b1df63400e1961a.html">Acessar a p&aacute;gina inicial do sistema Leiloes</a></span>
+
+                        <div class="requirementNarrative read-more-text"></div>
+                    </td>
+
+                        <td class="bluetext requirementRowCell">0</td>
+
+                    <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                    <td class="greentext requirementRowCell">0</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">0</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="Acessar a página inicial do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="Acessar a página inicial do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="Acessar a página inicial do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="Acessar a página inicial do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="Acessar a página inicial do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="Acessar a página inicial do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="Acessar a página inicial do sistema Leiloes:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+
+
+                <tr class="test-SUCCESS requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                        <span style="display:none">2</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="SUCCESS-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="bcd27b86b64230a151089b69a435f4b84d3509aed28912a845dcdcb1213ba3c3.html">Cadastrar um usuario no site Automation Practice</a></span>
+
+                        <div class="requirementNarrative read-more-text"></div>
+                    </td>
+
+                        <td class="bluetext requirementRowCell">0</td>
+
+                    <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                    <td class="greentext requirementRowCell">0</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">0</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="Cadastrar um usuario no site Automation Practice:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="Cadastrar um usuario no site Automation Practice:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="Cadastrar um usuario no site Automation Practice:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="Cadastrar um usuario no site Automation Practice:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="Cadastrar um usuario no site Automation Practice:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="Cadastrar um usuario no site Automation Practice:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="Cadastrar um usuario no site Automation Practice:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+
+
+                <tr class="test-SUCCESS requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                        <span style="display:none">2</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="SUCCESS-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="fb81cebe579f25811489067bd17733e7d7d5fb851c59effc9acfc5da45034c1f.html">Cadastrar um usuario no site Automation Practice</a></span>
+
+                        <div class="requirementNarrative read-more-text"></div>
+                    </td>
+
+                        <td class="bluetext requirementRowCell">0</td>
+
+                    <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                    <td class="greentext requirementRowCell">0</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">0</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="Cadastrar um usuario no site Automation Practice:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="Cadastrar um usuario no site Automation Practice:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="Cadastrar um usuario no site Automation Practice:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="Cadastrar um usuario no site Automation Practice:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="Cadastrar um usuario no site Automation Practice:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="Cadastrar um usuario no site Automation Practice:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="Cadastrar um usuario no site Automation Practice:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+
+
+                <tr class="test-SUCCESS requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                        <span style="display:none">2</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="SUCCESS-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="2f5c559be2df18888e351ab0f611e92f932635741848a50866a147d4a8ed7e84.html">teste</a></span>
+
+                        <div class="requirementNarrative read-more-text"></div>
+                    </td>
+
+                        <td class="bluetext requirementRowCell">0</td>
+
+                    <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                    <td class="greentext requirementRowCell">0</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">0</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="teste:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="teste:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="teste:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="teste:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="teste:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="teste:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="teste:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+
+
+                <tr class="test-SUCCESS requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                        <span style="display:none">2</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="SUCCESS-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="358cb4105a51f4607d96f4eef4d21530135aa0453b86296a5a266aca7ce41363.html">teste</a></span>
+
+                        <div class="requirementNarrative read-more-text"></div>
+                    </td>
+
+                        <td class="bluetext requirementRowCell">0</td>
+
+                    <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                    <td class="greentext requirementRowCell">0</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">0</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="  - Total tests: 0
+  - Passing tests: 0 (0%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="teste:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="teste:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%"
+                     style="width: 0px;">
+                    <div class="ignoredbar"
+                         style="width: 0px;"
+                         title="teste:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                        <div class="compromisedbar"
+                             style="width: 0px;"
+                             title="teste:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                            <div class="errorbar"
+                                 style="width: 0px;"
+                                 title="teste:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="teste:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="teste:
+  - Passing Stories: 0 (0%
+  - Stories Failing: 0 (0%
+  - Stories Failing with errors: 0
+  - Compromised Stories: 0
+  - Pending Stories: 0
+  - Ignored or skipped Stories: 0
+  - Untested Stories: 1 (0%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+            </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+<span class="version">Serenity BDD version 1.9.9</span>
+</div>
+
+
+</body>
+</html>

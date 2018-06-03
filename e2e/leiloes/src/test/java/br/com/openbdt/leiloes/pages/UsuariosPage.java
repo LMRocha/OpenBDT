@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.springframework.stereotype.Component;
 
-import br.com.openbdt.leiloes.utins.ColunasUsuarioEnum;
+import br.com.openbdt.leiloes.utils.ColunasUsuarioEnum;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 

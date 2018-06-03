@@ -3,21 +3,15 @@ package br.com.openbdt.leiloes.steps.business;
 import java.util.List;
 
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.test.context.ContextConfiguration;
 
-import io.openbdt.element.WebBrowserScreenElement;
-import br.com.openbdt.leiloes.pages.HomePage;
 import br.com.openbdt.leiloes.pages.NovoUsuarioPage;
-import br.com.openbdt.leiloes.pages.PageObjectClass;
 import br.com.openbdt.leiloes.pages.UsuariosPage;
-import br.com.openbdt.leiloes.utins.ColunasUsuarioEnum;
+import br.com.openbdt.leiloes.utils.ColunasUsuarioEnum;
+import io.openbdt.element.WebBrowserScreenElement;
 import jxl.common.Logger;
-import net.serenitybdd.core.annotations.findby.By;
 
 @ContextConfiguration("/context.xml")
 @Component

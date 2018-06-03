@@ -1,4 +1,4 @@
-package br.com.openbdt.leiloes.utins;
+package br.com.openbdt.leiloes.utils;
 
 public enum ColunasUsuarioEnum {
 	
